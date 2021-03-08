@@ -36,6 +36,9 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
         alert(`You Lost :C ! Computer chose ${computerSelection}`);
     }
+    else {
+        alert('Are you illeterate?')
+    }
     
 
     // Computer Selection 
@@ -48,9 +51,7 @@ function playRound(playerSelection, computerSelection) {
     else if (computerSelection === 'Scissors' && playerSelection === 'Rock') {
         alert(`You Won :D ! Computer chose ${computerSelection}`);
     }
-    else {
-        alert('Are you illeterate?')
-    }
+
 
     
 }
