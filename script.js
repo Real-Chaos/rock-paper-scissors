@@ -21,6 +21,8 @@ function computerPlay() {
 }
 function playRound(playerSelection, computerSelection) {
 
+    // Player Selection
+
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
     if (playerSelection === computerSelection) {
         alert(`It's a tie! Computer chose ${computerSelection}`);
@@ -34,12 +36,23 @@ function playRound(playerSelection, computerSelection) {
     else if (playerSelection === 'Scissors' && computerSelection === 'Rock') {
         alert(`You Lost :C ! Computer chose ${computerSelection}`);
     }
-    else if (playerSelection !== 'Rock' || playerSelection !== 'Paper' || playerSelection !== 'Scissors') {
-        alert('Are you illeterate?')
+    
+
+    // Computer Selection 
+    if (computerSelection === 'Rock' && playerSelection === 'Paper') {
+        alert(`You Won! ;D Computer chose ${computerSelection}`);
+    }
+    else if (computerSelection === 'Paper' && playerSelection === 'Scissors') {
+        alert(`You Won ! ;D  Computer chose ${computerSelection}`);
+    }
+    else if (computerSelection === 'Scissors' && playerSelection === 'Rock') {
+        alert(`You Won :D ! Computer chose ${computerSelection}`);
     }
     else {
-        alert(`You won! Computer Chose ${computerSelection}`)
+        alert('Are you illeterate?')
     }
+
+    
 }
 function game() {
 let loopCount = 1;
