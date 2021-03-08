@@ -39,12 +39,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 function game() {
+let loopCount = 1;
+while (loopCount <= 5) {
 playerSelection = prompt('Enter "Rock", "Paper", or "Scissors" to play!');
 computerSelection = computerPlay();
 playRound(playerSelection, computerSelection);
+loopCount++
+    }
 }
-game();
-game();
-game();
-game();
 game();
