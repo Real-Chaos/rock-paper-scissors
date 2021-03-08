@@ -20,6 +20,7 @@ function computerPlay() {
     return computerChoice;
 }
 function playRound(playerSelection, computerSelection) {
+
     
     playerSelection = playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1).toLowerCase();
     if (playerSelection === computerSelection) {
@@ -35,27 +36,9 @@ function playRound(playerSelection, computerSelection) {
         alert(`You Lost :C ! Computer chose ${computerSelection}`);
     }
     else {
-        alert('Please enter "Rock", "Paper", or "Scissors" to play!')
+        alert(`You won! Computer Chose ${computerSelection}`)
     }
-    
-    switch (computerSelection) {
-        case computerSelection === 'Rock':
-            case playerSelection === 'Paper':
-                alert(`You Won! Computer Chose ${computerSelection}`)
-                break;
-        case computerSelection === 'Paper':
-            case playerSelection === 'Scissors':
-                alert(`You Won! Computer Chose ${computerSelection}`)
-                break;
-                
-        case computerSelection === 'Scissors':
-            case playerSelection === 'Rock':
-                alert(`You Won! Computer Chose ${computerSelection}`)
-                break;
-    }
-    
-
-    
+     
 }
 
 playerSelection = prompt('Enter "Rock", "Paper", or "Scissors" to play!');
